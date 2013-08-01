@@ -1,0 +1,40 @@
+/* 
+    Document   : header
+    Created on : 27.05.2013, 16:15:13
+    Author     : IPivnenko
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+header {
+    display: block;
+    width: 80%;
+    height: 130px;
+    padding: 40px;
+    position: relative;
+    background: url('../images/cap.jpg') no-repeat 85px 30px;
+}
+
+#logo {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    height: 130px;
+    line-height: 60px;
+    text-align: center;
+	
+}
+
+#logo a {
+    color: #ffffff;
+    text-shadow: black 0px 0px 7px;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+}
+
+
+#logo img {
+    margin-left: 70px;
+    vertical-align: middle;
+}

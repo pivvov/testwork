@@ -1,0 +1,76 @@
+/* 
+    Document   : Menu
+    Created on : 27.05.2013, 16:15:52
+    Author     : IPivnenko
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+nav.navHeader {
+    line-height: 57px;
+    position: absolute;
+    right: 40px;
+    height: 57px;
+    font-family: "Open Sans", sans-serif;
+}
+
+nav.navHeader a {
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: #1C1C1C;
+    font-size: 1.2em;
+}
+
+
+nav.navHeader a:hover {
+    text-decoration: none;
+}
+
+nav.navHeader ul {
+    padding: 0 20px 0 20px;
+    list-style: none;
+}
+
+nav.navHeader ul li {
+    display: inline;
+    padding: 10px 10px 10px 10px;
+    margin: 0 8px 0 8px;
+}
+
+
+nav.sideBar {
+    position: relative;
+    left: -20px;
+    top: -20px;
+    width: 240px;
+    background: #f3f3f3;
+    padding: 20px;
+    border: solid 1px #e3e3e3;
+    margin: 0 10px 0 0;
+    text-shadow: 1px 1px 0px rgba(255,255,255,1);
+    box-shadow: inset 0px 0px 0px 1px #fff;    
+}
+
+nav.sideBar ul {
+    list-style: none;
+}
+
+nav.sideBar ul li {
+    border-top: solid 1px #e3e3e3;
+    padding: 10px 0 10px 0;
+}
+
+nav.sideBar ul li.first {
+    padding-top: 0;
+    border-top: 0;
+}
+
+nav.sideBar li>ul.innerlist {
+    padding: 0 15px;
+    margin-bottom: 0;
+}
+
