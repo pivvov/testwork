@@ -1,0 +1,188 @@
+========================= [127.0.0.1][GET - /] [Jul 26 2013 16:08:25]=========================
+Error: lmbFileNotFoundException: db.conf.php: file alias not resolved
+Additional attributes: Array
+(
+    [file_path] => db.conf.php
+)
+
+Back trace:
+* lmbException::__construct(STRING(36) "db.conf.php: file alias not resolved", ARRAY(1)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\fs\src\exception\lmbFileNotFoundException.class.php" line 25
+* lmbFileNotFoundException::__construct(STRING(11) "db.conf.php", STRING(23) "file alias not resolved") in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\fs\src\lmbFileLocator.class.php" line 70
+* lmbFileLocator::_handleNotResolvedAlias(STRING(11) "db.conf.php") in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\fs\src\lmbFileLocator.class.php" line 46
+* lmbFileLocator::locate(STRING(11) "db.conf.php", ARRAY(0)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\fs\src\lmbCachingFileLocator.class.php" line 83
+* lmbCachingFileLocator::locate(STRING(11) "db.conf.php") in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\fs\src\lmbFsTools.class.php" line 31
+========================= [127.0.0.1][GET - /] [Jul 26 2013 16:11:41]=========================
+Error: lmbFileNotFoundException: db.conf.php: file alias not resolved
+Additional attributes: Array
+(
+    [file_path] => db.conf.php
+)
+
+Back trace:
+* lmbException::__construct(STRING(36) "db.conf.php: file alias not resolved", ARRAY(1)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\fs\src\exception\lmbFileNotFoundException.class.php" line 25
+* lmbFileNotFoundException::__construct(STRING(11) "db.conf.php", STRING(23) "file alias not resolved") in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\fs\src\lmbFileLocator.class.php" line 70
+* lmbFileLocator::_handleNotResolvedAlias(STRING(11) "db.conf.php") in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\fs\src\lmbFileLocator.class.php" line 46
+* lmbFileLocator::locate(STRING(11) "db.conf.php") in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\fs\src\lmbFsTools.class.php" line 31
+* lmbFsTools::findFileByAlias(STRING(11) "db.conf.php", STRING(24) "settings;limb/*/settings", STRING(6) "config", FALSE)
+========================= [127.0.0.1][GET - /] [Jul 26 2013 16:14:29]=========================
+Error: lmbException: Function mysql_connect non exists. Check your PHP configuration
+Back trace:
+* lmbException::__construct(STRING(63) "Function mysql_connect non exists. Check your PHP configuration") in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\dbal\src\drivers\lmbDbBaseConnection.class.php" line 29
+* lmbDbBaseConnection::__construct(OBJECT(lmbDbDSN), STRING(61) "mysql://root:13012001@localhost/limb_application?charset=utf8") in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\dbal\src\toolkit\lmbDbTools.class.php" line 194
+* lmbDbTools::createDbConnection(OBJECT(lmbDbDSN)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\dbal\src\toolkit\lmbDbTools.class.php" line 144
+* lmbDbTools::getDbConnectionByDsn(OBJECT(lmbDbDSN)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\dbal\src\toolkit\lmbDbTools.class.php" line 166
+* lmbDbTools::getDbConnectionByName(STRING(3) "dsn") in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\dbal\src\toolkit\lmbDbTools.class.php" line 176
+========================= [127.0.0.1][GET - /news] [Jul 26 2013 16:57:44]=========================
+Error: lmbException: include_once(src/models/News.class.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory
+Additional attributes: Array
+(
+    [file] => C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\core\common.inc.php
+    [line] => 168
+)
+
+Back trace:
+* lmbDelegate::invoke(INT(2), STRING(149) "include_once(src/models/News.class.php) [&lt;a href='function.include-once'&gt;function.include-once&lt;/a&gt;]:...", STRING(84) "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\core\common.inc.php", INT(168), ARRAY(2)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\core\common.inc.php" line 168
+* lmb_autoload() in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\core\common.inc.php" line 168
+* lmb_autoload(STRING(4) "News")
+* spl_autoload_call(STRING(4) "News")
+* class_exists(STRING(4) "News", TRUE) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\active_record\src\lmbActiveRecord.class.php" line 1769
+========================= [127.0.0.1][GET - /news] [Jul 26 2013 17:52:35]=========================
+Error: lmbMacroException: MACRO exception: Tag 'table' not found in dictionary
+Additional attributes: Array
+(
+    [0] => file
+    [1] => C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb/template/news/display.phtml
+    [2] => line
+    [3] => 11
+)
+
+Back trace:
+* lmbException::__construct(STRING(52) "MACRO exception: Tag 'table' not found in dictionary", ARRAY(4)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\macro\src\lmbMacroException.class.php" line 20
+* lmbMacroException::__construct(STRING(35) "Tag 'table' not found in dictionary", ARRAY(4)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\macro\src\compiler\lmbMacroTagParsingState.class.php" line 31
+* lmbMacroTagParsingState::raiseNotSuchTagException(STRING(5) "table", OBJECT(lmbMacroSourceLocation)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\macro\src\compiler\lmbMacroTagParsingState.class.php" line 41
+* lmbMacroTagParsingState::startElement(STRING(5) "table", ARRAY(1)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\macro\src\compiler\lmbMacroParser.class.php" line 109
+* lmbMacroParser::startElement(STRING(5) "table", ARRAY(1)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\macro\src\compiler\lmbMacroTokenizer.class.php" line 300
+========================= [127.0.0.1][GET - /news] [Jul 26 2013 17:56:26]=========================
+Error: lmbMacroException: MACRO exception: Tag 'tr' not found in dictionary
+Additional attributes: Array
+(
+    [0] => file
+    [1] => C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb/template/news/display.phtml
+    [2] => line
+    [3] => 12
+)
+
+Back trace:
+* lmbException::__construct(STRING(49) "MACRO exception: Tag 'tr' not found in dictionary", ARRAY(4)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\macro\src\lmbMacroException.class.php" line 20
+* lmbMacroException::__construct(STRING(32) "Tag 'tr' not found in dictionary", ARRAY(4)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\macro\src\compiler\lmbMacroTagParsingState.class.php" line 31
+* lmbMacroTagParsingState::raiseNotSuchTagException(STRING(2) "tr", OBJECT(lmbMacroSourceLocation)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\macro\src\compiler\lmbMacroTagParsingState.class.php" line 41
+* lmbMacroTagParsingState::startElement(STRING(2) "tr", ARRAY(0)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\macro\src\compiler\lmbMacroParser.class.php" line 109
+* lmbMacroParser::startElement(STRING(2) "tr", ARRAY(0)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\macro\src\compiler\lmbMacroTokenizer.class.php" line 300
+========================= [127.0.0.1][GET - /news] [Jul 26 2013 17:59:54]=========================
+Error: lmbMacroException: MACRO exception: Tag 'tr' not found in dictionary
+Additional attributes: Array
+(
+    [0] => file
+    [1] => C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb/template/news/display.phtml
+    [2] => line
+    [3] => 45
+)
+
+Back trace:
+* lmbException::__construct(STRING(49) "MACRO exception: Tag 'tr' not found in dictionary", ARRAY(4)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\macro\src\lmbMacroException.class.php" line 20
+* lmbMacroException::__construct(STRING(32) "Tag 'tr' not found in dictionary", ARRAY(4)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\macro\src\compiler\lmbMacroTagParsingState.class.php" line 31
+* lmbMacroTagParsingState::raiseNotSuchTagException(STRING(2) "tr", OBJECT(lmbMacroSourceLocation)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\macro\src\compiler\lmbMacroTagParsingState.class.php" line 63
+* lmbMacroTagParsingState::endElement(STRING(2) "tr") in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\macro\src\compiler\lmbMacroParser.class.php" line 114
+* lmbMacroParser::endElement(STRING(2) "tr") in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\macro\src\compiler\lmbMacroTokenizer.class.php" line 164
+========================= [127.0.0.1][GET - /] [Jul 29 2013 15:58:33]=========================
+Error: lmbDbException: Table does not exist 'lmb_cms_user'
+Back trace:
+* lmbException::__construct(STRING(35) "Table does not exist 'lmb_cms_user'") in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\dbal\src\drivers\mysqli\lmbMysqliDbInfo.class.php" line 57
+* lmbMysqliDbInfo::getTable(STRING(12) "lmb_cms_user")
+* call_user_func_array(ARRAY(2), ARRAY(1)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\core\src\lmbProxy.class.php" line 57
+* lmbProxy::__call(STRING(8) "getTable", ARRAY(1)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\dbal\src\lmbTableGateway.class.php" line 65
+* lmbDbCachedInfo::getTable(STRING(12) "lmb_cms_user") in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\dbal\src\lmbTableGateway.class.php" line 65
+========================= [127.0.0.1][GET - /] [Jul 30 2013 17:17:36]=========================
+Error: lmbMacroException: MACRO exception: Template source file not found
+Additional attributes: Array
+(
+    [file_name] => flash_boox.phtml
+)
+
+Back trace:
+* lmbException::__construct(STRING(47) "MACRO exception: Template source file not found", ARRAY(1)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\macro\src\lmbMacroException.class.php" line 20
+* lmbMacroException::__construct(STRING(30) "Template source file not found", ARRAY(1)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\macro\src\compiler\lmbMacroCompiler.class.php" line 74
+* lmbMacroCompiler::parseTemplate(STRING(16) "flash_boox.phtml", OBJECT(lmbMacroInsertTag)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\macro\src\tags\core\insert.tag.php" line 44
+* lmbMacroInsertTag::preParse(OBJECT(lmbMacroCompiler)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\macro\src\compiler\lmbMacroTreeBuilder.class.php" line 66
+* lmbMacroTreeBuilder::pushNode(OBJECT(lmbMacroInsertTag)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\macro\src\compiler\lmbMacroTagParsingState.class.php" line 88
+========================= [127.0.0.1][GET - /user/register] [Jul 30 2013 17:23:31]=========================
+Error: lmbMacroException: MACRO exception: Attribute should have a value
+Additional attributes: Array
+(
+    [file] => C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb/template/user/register.phtml
+    [line] => 14
+    [tag] => input
+    [attribute] => required
+)
+
+Back trace:
+* lmbException::__construct(STRING(46) "MACRO exception: Attribute should have a value", ARRAY(4)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\macro\src\lmbMacroException.class.php" line 20
+* lmbMacroException::__construct(STRING(29) "Attribute should have a value", ARRAY(4)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\macro\src\compiler\lmbMacroTagParsingState.class.php" line 118
+* lmbMacroTagParsingState::_addAttributesToTagNode(OBJECT(lmbMacroInputTag), ARRAY(4)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\macro\src\compiler\lmbMacroTagParsingState.class.php" line 103
+* lmbMacroTagParsingState::buildTagNode(OBJECT(lmbMacroTagInfo), STRING(5) "input", ARRAY(4)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\macro\src\compiler\lmbMacroTagParsingState.class.php" line 86
+* lmbMacroTagParsingState::emptyElement(STRING(5) "input", ARRAY(4)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\macro\src\compiler\lmbMacroParser.class.php" line 119
+========================= [127.0.0.1][GET - /user/register] [Jul 30 2013 17:25:12]=========================
+Error: lmbMacroException: MACRO exception: Unrecognized type attribute for input tag
+Additional attributes: Array
+(
+    [tag] => input
+    [file] => C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb/template/user/register.phtml
+    [line] => 30
+)
+
+Back trace:
+* lmbException::__construct(STRING(58) "MACRO exception: Unrecognized type attribute for input tag", ARRAY(3)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\macro\src\lmbMacroException.class.php" line 20
+* lmbMacroException::__construct(STRING(41) "Unrecognized type attribute for input tag", ARRAY(3)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\macro\src\compiler\lmbMacroNode.class.php" line 90
+* lmbMacroNode::raise(STRING(41) "Unrecognized type attribute for input tag", ARRAY(1)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\macro\src\compiler\lmbMacroTag.class.php" line 206
+* lmbMacroTag::raise(STRING(41) "Unrecognized type attribute for input tag") in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\macro\src\tags\form\input.tag.php" line 47
+* lmbMacroInputTag::preParse(OBJECT(lmbMacroCompiler)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\macro\src\compiler\lmbMacroTreeBuilder.class.php" line 66
+========================= [127.0.0.1][POST - /user/register] [Jul 31 2013 15:34:46]=========================
+Error: lmbDbException: Table does not exist 'user'
+Back trace:
+* lmbException::__construct(STRING(27) "Table does not exist 'user'") in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\dbal\src\drivers\mysqli\lmbMysqliDbInfo.class.php" line 57
+* lmbMysqliDbInfo::getTable(STRING(4) "user")
+* call_user_func_array(ARRAY(2), ARRAY(1)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\core\src\lmbProxy.class.php" line 57
+* lmbProxy::__call(STRING(8) "getTable", ARRAY(1)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\dbal\src\lmbTableGateway.class.php" line 65
+* lmbDbCachedInfo::getTable(STRING(4) "user") in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\dbal\src\lmbTableGateway.class.php" line 65
+========================= [127.0.0.1][POST - /user/register] [Jul 31 2013 16:02:48]=========================
+Error: Using $this when not in object context
+Back trace:
+* lmbLog::log(STRING(38) "Using $this when not in object context", INT(4), ARRAY(0), NULL, STRING(34) "[127.0.0.1][POST - /user/register]") in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\log\src\toolkit\lmbLogTools.class.php" line 44
+* lmbLogTools::log(STRING(38) "Using $this when not in object context", INT(4))
+* call_user_func_array(ARRAY(2), ARRAY(2)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\toolkit\src\lmbToolkit.class.php" line 243
+* lmbToolkit::__call(STRING(3) "log", ARRAY(2)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\web_app\src\filter\lmbErrorHandlingFilter.class.php" line 47
+* lmbToolkit::log(STRING(38) "Using $this when not in object context", INT(4)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\web_app\src\filter\lmbErrorHandlingFilter.class.php" line 47
+========================= [127.0.0.1][POST - /user/register] [Jul 31 2013 16:05:18]=========================
+Error: Using $this when not in object context
+Back trace:
+* lmbLog::log(STRING(38) "Using $this when not in object context", INT(4), ARRAY(0), NULL, STRING(34) "[127.0.0.1][POST - /user/register]") in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\log\src\toolkit\lmbLogTools.class.php" line 44
+* lmbLogTools::log(STRING(38) "Using $this when not in object context", INT(4))
+* call_user_func_array(ARRAY(2), ARRAY(2)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\toolkit\src\lmbToolkit.class.php" line 243
+* lmbToolkit::__call(STRING(3) "log", ARRAY(2)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\web_app\src\filter\lmbErrorHandlingFilter.class.php" line 47
+* lmbToolkit::log(STRING(38) "Using $this when not in object context", INT(4)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\web_app\src\filter\lmbErrorHandlingFilter.class.php" line 47
+========================= [127.0.0.1][POST - /user/register] [Jul 31 2013 16:06:46]=========================
+Error: Using $this when not in object context
+Back trace:
+* lmbLog::log(STRING(38) "Using $this when not in object context", INT(4), ARRAY(0), NULL, STRING(34) "[127.0.0.1][POST - /user/register]") in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\log\src\toolkit\lmbLogTools.class.php" line 44
+* lmbLogTools::log(STRING(38) "Using $this when not in object context", INT(4))
+* call_user_func_array(ARRAY(2), ARRAY(2)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\toolkit\src\lmbToolkit.class.php" line 243
+* lmbToolkit::__call(STRING(3) "log", ARRAY(2)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\web_app\src\filter\lmbErrorHandlingFilter.class.php" line 47
+* lmbToolkit::log(STRING(38) "Using $this when not in object context", INT(4)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\web_app\src\filter\lmbErrorHandlingFilter.class.php" line 47
+========================= [127.0.0.1][POST - /user/register] [Jul 31 2013 16:07:08]=========================
+Error: Class 'lmbEmailRule' not found
+Back trace:
+* lmbLog::log(STRING(30) "Class 'lmbEmailRule' not found", INT(4), ARRAY(0), NULL, STRING(34) "[127.0.0.1][POST - /user/register]") in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\log\src\toolkit\lmbLogTools.class.php" line 44
+* lmbLogTools::log(STRING(30) "Class 'lmbEmailRule' not found", INT(4))
+* call_user_func_array(ARRAY(2), ARRAY(2)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\toolkit\src\lmbToolkit.class.php" line 243
+* lmbToolkit::__call(STRING(3) "log", ARRAY(2)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\web_app\src\filter\lmbErrorHandlingFilter.class.php" line 47
+* lmbToolkit::log(STRING(30) "Class 'lmbEmailRule' not found", INT(4)) in "C:\Users\IPivnenko\Documents\NetBeansProjects\crud_limb\lib\limb\web_app\src\filter\lmbErrorHandlingFilter.class.php" line 47
