@@ -1,0 +1,53 @@
+<?php $this->title = 'Your profile'; ?>
+{{wrap with="front_page_layout.phtml" in="content_zone"}}
+    This is your profile page. You can change some of your profile fields as well as your password<br/>
+
+    <h2>Profile</h2>
+    {{form id='profile_form' name='profile_form' method='post'}}
+        {{include file='user/include/form_fileds.phtml'/}}
+            <tr>
+                <td colspan="2" class="tdCaption"> 
+                    <input id='edit' name='edit' type='submit' value='Update profile'/>
+                </td>
+            </tr>
+        </table>
+    {{/form}}
+    
+    
+    <h2>Password change form</h2>
+    {{form id='change_password_form' name='change_password_form' method=post}}
+        {{include file='_admin/form_errors.phtml'/}}
+        <table class="contentTable">
+            <tr>
+                <td class="tdCaption">
+                    Old password:
+                </td>
+                <td class="required field">
+                    {{input type="text" name="old_password" title="Old password" required="required" /}} 
+                </td>
+            </tr>
+            <tr>
+                <td class="tdCaption">
+                    New Password:
+                </td>
+                <td class="required field">
+                    {{input type="password" name="password" title="Password" required="required" /}}
+                </td>
+            </tr>
+            <tr>
+                <td class="tdCaption">
+                    Repeat password:
+                </td>
+                <td class="required field">
+                    {{input type="password" name="repeat_password" title="Repeat password" required="required" /}} 
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="tdCaption">
+                    <input type="submit" id="change_password" name="change_password" value="Change password" />
+                </td>
+            </tr>
+        </table>
+    {{/form}}
+{{/wrap}}    
+        

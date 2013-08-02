@@ -1,0 +1,35 @@
+{{include file='_admin/form_errors.phtml'/}}
+
+        <table class="contentTable">
+            <tr>
+                <td class="tdCaption">
+                    Login:
+                </td>
+                <td class="required field">
+                    {{input name='login' type='text' title='Login' required='required' /}}
+                </td>
+            </tr>
+            <tr>
+                <td class="tdCaption">
+                    Name:
+                </td>
+                <td class="required field">
+                    {{input name='name' type='text' title='Name'/}}
+                </td>
+            </tr>
+            <tr>
+                <td class="tdCaption">
+                    Email:
+                </td>
+                <td class="required field">
+                    {{input name='email' type='email' title='Email' error_class='error' required='required' /}}
+                </td>
+            </tr>
+            <tr>
+                <td class="tdCaption">
+                    Delivery address:
+                </td>
+                <td class="field">
+                    {{textarea name="address" id='address' type="text" title="Delivery address"/}}
+                </td>
+            </tr>
