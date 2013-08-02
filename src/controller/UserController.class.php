@@ -120,6 +120,13 @@
             }
         }
         
+        protected function _validateLoginForm()
+        {
+            $this->validator->addRequiredRule('login');
+            $this->validator->addRequiredRule('password');
+            $this->validator->validate($this->request);
+        }        
+        
         protected function _validatePasswordField() {
             
             $this->validator->addRequiredRule("password");
