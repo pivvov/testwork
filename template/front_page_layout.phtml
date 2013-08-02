@@ -36,14 +36,13 @@
                         <ul>
                             <li><a href="/product/">Products</a></li>
                             <li><a href="/cart/">Your Cart</a></li>
-                            <li><a href="/user/login">Login</a></li>
                         </ul>
                     </nav>
 
                     <dl id="profile">
                         <dt>Profile</dt>
                         <dd>
-                            Not yet implemented.
+                            {{include file="user/include/profile_box.phtml" user="$#toolkit.user"/}}
                         </dd>
                     </dl>
                 </aside>
