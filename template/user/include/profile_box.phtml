@@ -1,0 +1,56 @@
+<?php 
+if ($user->is_logged_in) { 
+?>
+    <aside style="display:table;">
+        <div style="dispay:table-row;">
+            User: {$user.name}
+        </div> 
+        <div style="display: table-row;">
+            Login: {$user.login}
+        </div>
+        <div style="display: table-row">
+            Email: {$user.email}
+        </div>
+        <div style="display: table-row">
+            <a href="/user/edit/">edit</a>
+            <a href="/user/logout">logout</a>
+        </div>
+    </aside>
+<?php 
+} else {
+?>
+    <form method="post" id="login_form" action="user/login">
+        <table class="contentTable">
+            <tr>
+                <td class="tdCaption">
+                    Login:
+                </td>
+                <td>
+                    <input type="text" name="login" id="login" class="input" required />
+                </td>
+            </tr>
+            <tr>
+                <td class="tdCaption">
+                    Password:
+                </td>
+                <td>
+                    <input type="password" name="password" id="password" class="input" required />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Use <b>admin</b>/<b>secret</b> to enter in <a href="/admin/">administration panel</a>.
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="tdCaption">
+                    <input type="submit" name="submitted" value="Login" />
+                </td>
+            </tr>
+        </table>
+    </form>
+    <a href="/user/register">Register</a>
+<?php
+}
+?>
+
