@@ -1,6 +1,6 @@
 <?php
     class UserController extends lmbController {
-        
+               
         public function doLogin() {
             if (!$this->request->hasPost()) {
                 return;
@@ -27,6 +27,13 @@
                 $this->flashAndRedirect('You were logged in', '/');
             }
         }
+ 
+        public function doLogout() {
+            $user = $this->toolkit->getUser();
+            $user->logout();
+            $this->toolkit->getSession()->remove('user_id');
+            $this->response->redirect('/');
+        } 
         
         public function doRegister() {
             /*
@@ -56,6 +63,63 @@
             
         }//end: doRegister
         
+        public function doEdit() {
+            $this->setFormDatasource($this->toolkit->getUser(), 'profile_form');
+            
+            if($this->request->has('change_password')) {
+                $this->_changeUserPassword();
+            }
+            
+            if ($this->request->has('edit')) {
+                $this->_updateUserProfile();
+            }
+        }
+        
+        protected function _changeUserPassword() {
+            $this->useForm('change_password_form');
+            $this->_validateChangePasswordForm();
+            
+            if ($this->error_list->isValid()) {
+                $user = $this->toolkit->getUser();
+                
+                $user->setPassword($this->request->get("password"));
+                $user->save();
+                
+                $this->flashMessage('Password was change');
+                $this->toolkit->redirect();
+            }
+        }
+        
+        protected function _validateChangePasswordForm() {
+            $this->validator->addRequiredRule('old_password');
+            $this->_validatePasswordField();
+
+            $user = $this->toolkit->getUser();
+            $old_password = $this->request->get('old_password');
+            
+            if($old_password) {
+                $hashed_password = $user->cryptPassword($old_password);
+                
+                if($user->getHashedPassword() != $hashed_password)
+                    $this->error_list->addError('Wrong old password', array('old_password'));
+            }
+        }        
+
+        protected function _updateUserProfile() {
+            $this->useForm('profile_form');
+            $this->setFormDatasource($this->toolkit->getUser());
+            
+            $user_properties= $this->request->getPost(array("login", "name", "email", "password", "address"));
+            
+            $user = $this->toolkit->getUser();
+            $user->import($user_properties);
+            
+            if ($user->trySave($this->error_list)) {
+                $this->flashMessage('Profile is changed');
+                $this->toolkit->redirect();
+            }
+        }
+        
         protected function _validatePasswordField() {
             
             $this->validator->addRequiredRule("password");
@@ -67,13 +131,6 @@
             $this->validator->validate($this->request);
             
         }//end: _validatePasswordField()
-        
-        public function doLogout() {
-            $user = $this->toolkit->getUser();
-            $user->logout();
-            $this->toolkit->getSession()->remove('user_id');
-            $this->response->redirect('/');
-        } 
-        
+          
     }//end: class UserController
 ?>
