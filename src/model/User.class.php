@@ -15,8 +15,8 @@
         public function login($login, $password) {
             $hash_password = $this->cryptPassword($password);
             
-            $criteria = new lmbSQLCriteria('login', $login);
-            $criteria->addAnd(new lmbSQLCriteria('hashed_password', $password));
+            $criteria = new lmbSQLFieldCriteria('login', $login);
+            $criteria->addAnd(new lmbSQLFieldCriteria('hashed_password', $password));
             
             $user = lmbActiveRecord::findFirst('User', array('criteria' => $criteria));
             
@@ -33,7 +33,7 @@
         }
         
         public function logout() {
-            $this->removeAll();
+            //$this->removeAll();
             $this->is_logged_in = false;
         }
 
